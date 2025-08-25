@@ -30,6 +30,10 @@ a:visited{
   color:#f1ebcf;
 }
 
+figure {
+  margin: 0;
+}
+
 .message {
   font-size: 20px;
   letter-spacing: 12px;
@@ -392,4 +396,5 @@ a:visited{
     }
   }
   
+
 
