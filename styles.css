@@ -1,0 +1,394 @@
+
+/* Font Declration */
+@font-face {
+    font-family: 'Munro';
+    src: url('../fonts/Munro-2LYe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}   
+
+/* Standard Overrides */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #1a1a18;
+    font-family: 'Munro', sans-serif;
+    color:#f1ebcf;
+    overflow-x: hidden;
+    touch-action: manipulation;
+}
+
+a{
+  display: inline-block;
+  line-height: auto;
+  color:#f1ebcf;
+
+}
+
+a:visited{
+  color:#f1ebcf;
+}
+
+.message {
+  font-size: 20px;
+  letter-spacing: 12px;
+  line-height: 28px;
+}
+
+.hint{
+  text-align:center;
+  letter-spacing: 2px;
+  font-size: 32px;
+  line-height: 48px;
+
+
+}
+
+/* Containers */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    flex-direction:column;
+}
+
+.wrapper-scale {
+  height:100%;
+  transform: scale(0.7);
+  transform-origin: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    max-height: 90vh;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.top-row,
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.middle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    height:200px;
+}
+
+/* Border Decorations */
+
+.border-item{
+  transform: scale(0.8); /* Adjust as needed */
+}
+
+.border-se{
+  position:relative;
+  top:1px;
+}
+
+.corner{
+  position:relative;
+}
+
+.corner-center{
+  /* border:3px solid red; */
+  position:absolute;
+  height:34px;
+  width:34px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.nw{
+  top:62px;
+  left:67px;
+}
+
+.ne{
+  top:62px;
+  left:182px;
+}
+
+.sw{
+  top:178px;
+  left:67px;
+}
+
+
+/* Key */
+
+.key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.key-scale {
+    transform: scale(0.7); 
+    transform-origin: center center;
+}
+
+/* Cylinders */
+
+.cylinders {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    top: 160px; 
+    left: 28%;
+    transform: translateX(-50%);
+    cursor:pointer;
+}
+
+/* Teeth */
+
+.teeth {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    top: 250px; 
+    left: 1030px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Lock */
+
+.lock {
+    height: 211px;
+    transition: opacity 0.3s ease;
+    transform: scale(0.7); /* Adjust as needed */
+    position: relative;
+    top: 140px;
+    cursor:pointer;
+
+}
+
+.lock:hover {
+    opacity: 0.6;
+}
+
+/* Animations */
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0); }
+    25% { transform: translate(-1px, 1px) rotate(-1deg); }
+    50% { transform: translate(1px, -1px) rotate(0deg); }
+    75% { transform: translate(-1px, 1px) rotate(-1deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+  }
+  
+  .shake {
+    animation: shake 0.3s ease-in-out;
+  }
+
+  .shake-rotated {
+    animation: shake-rotated 0.3s ease-in-out;
+  }
+
+
+  @keyframes keyBump {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    60%  { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes shake-rotated {
+    0% { transform: translate(0, 0) rotate(90deg); }
+    25% { transform: translateY(-1px) rotate(89deg); }
+    50% { transform: translateY(1px) rotate(90deg); }
+    75% { transform: translateY(-1px) rotate(89deg); }
+    100% { transform: translate(0, 0) rotate(90deg); }
+  }
+  
+  @keyframes bump-rotated {
+    0% { transform: translate(0, 0) rotate(90deg); }
+    50% { transform: translateY(-10px) rotate(90deg); }
+    100% { transform: translate(0, 0) rotate(90deg); }
+  }
+  
+  .key-bump {
+    animation: keyBump 0.4s ease;
+  }
+
+  .bump-rotated {
+    animation: bump-rotated 0.4s ease;
+  }
+
+  /* Fade in animation */
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn .5s ease-in forwards;
+  }
+
+  /* Fade out animation */
+
+  .fade-out {
+    animation: fadeOut 0.5s ease forwards;
+  }
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+
+      .wrapper-scale{
+        transform: scale(0.6); 
+
+      }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .hint{
+      margin-top:0px;
+    }
+
+    .hint-img{
+      max-width:75%;
+      margin-top:0px;
+    }
+
+    .blue-hint-img{
+      max-width:50%;
+    }
+
+    .red-hint-img{
+      max-width:50%;
+    }
+
+    .message{
+      padding:20px;
+      font-size:20px;
+      line-height:32px;
+    }
+
+    .key-scale {
+      transform: scale(0.425);
+       transform-origin: center;
+    } 
+
+    .key{
+      transform: rotate(90deg); 
+      position:relative;
+      top:-50px;
+    }
+
+    .middle-row {
+        height:350px;
+    }
+
+    .main-content {
+      width: 100%;
+      height:100%;
+    }
+
+    .story-image{
+      height:950px;
+    }
+
+    .border-item {
+      width: 100px;
+      height: auto; /* or a set height if needed */
+      transform: none;
+    }
+    
+    .wrapper-scale{
+      transform: none;
+      /* height:100%; */
+      width:100%;
+      padding:0;
+      display:flex;
+      flex-direction: column;
+
+    }
+
+    .wrapper{
+      padding:20px;
+    }
+
+    .lock-scale{
+        display:block;
+        position:relative;
+        width:0px;
+    }
+
+    .lock {
+        position:absolute;
+        height: 100px;
+        transition: opacity 0.3s ease;
+        top:48px;
+        left:-103px;
+    }
+
+    .corner{
+      position:relative;
+    }
+    
+    .corner-center{
+      position:absolute;
+      height:15px;
+      width:15px;
+      
+    }
+
+    .nw{
+      height:50px;
+      width:50px;
+      top:0px;
+      left:0px;
+    }
+    .ne{
+      height:50px;
+      width:50px;
+      top:0px;
+      left:50px;
+    }
+
+    .sw{
+      height:50px;
+      width:50px;
+      top:50px;
+      left:0px;
+    }
+
+    .mobile-hide{
+      display:none;
+    }
+  }
+  
