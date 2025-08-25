@@ -241,7 +241,7 @@ a:visited{
 
   .fade-in {
     opacity: 0;
-    animation: fadeIn .5s ease-in forwards;
+    animation: fadeIn 5s ease-in forwards;
   }
 
   /* Fade out animation */
@@ -392,3 +392,4 @@ a:visited{
     }
   }
   
+
