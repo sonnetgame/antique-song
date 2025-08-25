@@ -1,25 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An embellished tome...</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
 
-<!-- <h2>Center Align Elements</h2>
-<p>To horizontally center a block element (like div), use margin: auto;</p> -->
+    <div class="wrapper-scale">
 
-<div class="center">
-  <p>Hello World 2!</p>
-</div>
+        <div class="main-content fade-in">
+<!--             <img src="img/BlueHint-Book-v1.png" title="A tome"> -->
+            <p class="message hint">
+            An embellished tome detailing the First Pilgrimage.<br class="mobile-hide">
+            On sale at Alma's Thrift... if you're okay<br class="mobile-hide">
+            with a few missing&nbsp;pages.
+            <br><br>
+                <a id="back-button" href="index.html">< go back</a>
+            </p>  
+        </div>
+
+    </div>
+
+    <script>
+
+        // const backButton = document.getElementById("back-button");
+
+        // // Sounds
+        // const backSound = new Audio("audio/Bloom_SFX_YFBV_WhistleKey-GoBackv1.wav");
+
+        // function playSound() {
+        //     backSound.play();
+        // } 
+
+        backButton.addEventListener("click", () => {
+            event.preventDefault(); // Prevent immediate navigation
+            playSound();
+            setTimeout(() => {
+                window.location.href = backButton.href;
+            }, 500); // Delay for .5 second
+        });
+        
+    </script>
 
 </body>
 </html>
-
-
