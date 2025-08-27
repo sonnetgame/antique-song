@@ -1,5 +1,5 @@
 
-/* Font Declration */
+/* Font Declaration */
 @font-face {
     font-family: 'Munro';
     src: url('../fonts/Munro-2LYe.ttf') format('truetype');
@@ -46,7 +46,6 @@ figure {
 /*   font-size: 32px; */
     font-size: 24px;
   line-height: 48px;
-
 
 }
 
@@ -99,102 +98,6 @@ figure {
     height:200px;
 }
 
-/* Border Decorations */
-
-.border-item{
-  transform: scale(0.8); /* Adjust as needed */
-}
-
-.border-se{
-  position:relative;
-  top:1px;
-}
-
-.corner{
-  position:relative;
-}
-
-.corner-center{
-  /* border:3px solid red; */
-  position:absolute;
-  height:34px;
-  width:34px;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.nw{
-  top:62px;
-  left:67px;
-}
-
-.ne{
-  top:62px;
-  left:182px;
-}
-
-.sw{
-  top:178px;
-  left:67px;
-}
-
-
-/* Key */
-
-.key {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-.key-scale {
-    transform: scale(0.7); 
-    transform-origin: center center;
-}
-
-/* Cylinders */
-
-.cylinders {
-    display: flex;
-    gap: 6px;
-    position: absolute;
-    top: 160px; 
-    left: 28%;
-    transform: translateX(-50%);
-    cursor:pointer;
-}
-
-/* Teeth */
-
-.teeth {
-    display: flex;
-    gap: 6px;
-    position: absolute;
-    top: 250px; 
-    left: 1030px;
-    transform: translateX(-50%);
-    z-index: -1;
-}
-
-/* Lock */
-
-.lock {
-    height: 211px;
-    transition: opacity 0.3s ease;
-    transform: scale(0.7); /* Adjust as needed */
-    position: relative;
-    top: 140px;
-    cursor:pointer;
-
-}
-
-.lock:hover {
-    opacity: 0.6;
-}
-
-/* Animations */
 
 @keyframes shake {
     0% { transform: translate(0, 0) rotate(0); }
@@ -208,39 +111,6 @@ figure {
     animation: shake 0.3s ease-in-out;
   }
 
-  .shake-rotated {
-    animation: shake-rotated 0.3s ease-in-out;
-  }
-
-
-  @keyframes keyBump {
-    0%   { transform: translateY(0); }
-    30%  { transform: translateY(-10px); }
-    60%  { transform: translateY(5px); }
-    100% { transform: translateY(0); }
-  }
-
-  @keyframes shake-rotated {
-    0% { transform: translate(0, 0) rotate(90deg); }
-    25% { transform: translateY(-1px) rotate(89deg); }
-    50% { transform: translateY(1px) rotate(90deg); }
-    75% { transform: translateY(-1px) rotate(89deg); }
-    100% { transform: translate(0, 0) rotate(90deg); }
-  }
-  
-  @keyframes bump-rotated {
-    0% { transform: translate(0, 0) rotate(90deg); }
-    50% { transform: translateY(-10px) rotate(90deg); }
-    100% { transform: translate(0, 0) rotate(90deg); }
-  }
-  
-  .key-bump {
-    animation: keyBump 0.4s ease;
-  }
-
-  .bump-rotated {
-    animation: bump-rotated 0.4s ease;
-  }
 
   /* Fade in animation */
 
@@ -289,29 +159,10 @@ figure {
       margin-top:0px;
     }
 
-    .blue-hint-img{
-      max-width:50%;
-    }
-
-    .red-hint-img{
-      max-width:50%;
-    }
-
     .message{
       padding:20px;
       font-size:20px;
       line-height:32px;
-    }
-
-    .key-scale {
-      transform: scale(0.425);
-       transform-origin: center;
-    } 
-
-    .key{
-      transform: rotate(90deg); 
-      position:relative;
-      top:-50px;
     }
 
     .middle-row {
@@ -347,56 +198,12 @@ figure {
       padding:20px;
     }
 
-    .lock-scale{
-        display:block;
-        position:relative;
-        width:0px;
-    }
-
-    .lock {
-        position:absolute;
-        height: 100px;
-        transition: opacity 0.3s ease;
-        top:48px;
-        left:-103px;
-    }
-
-    .corner{
-      position:relative;
-    }
-    
-    .corner-center{
-      position:absolute;
-      height:15px;
-      width:15px;
-      
-    }
-
-    .nw{
-      height:50px;
-      width:50px;
-      top:0px;
-      left:0px;
-    }
-    .ne{
-      height:50px;
-      width:50px;
-      top:0px;
-      left:50px;
-    }
-
-    .sw{
-      height:50px;
-      width:50px;
-      top:50px;
-      left:0px;
-    }
-
     .mobile-hide{
       display:none;
     }
   }
   
+
 
 
 
