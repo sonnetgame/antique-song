@@ -14,7 +14,7 @@ html, body {
     height: 100%;
     background-color: #f1ebcf;
     font-family: 'Munro', sans-serif;
-    color:#f1ebcf;
+    color:#5b7560;
     overflow-x: hidden;
     touch-action: manipulation;
 }
@@ -203,6 +203,7 @@ figure {
     }
   }
   
+
 
 
 
