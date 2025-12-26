@@ -42,7 +42,7 @@ img
 }
 
 .message {
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: 12px;
   line-height: 28px;
 }
@@ -51,7 +51,7 @@ img
   text-align:center;
   letter-spacing: 2px;
 /*   font-size: 32px; */
-    font-size: 24px;
+    font-size: 28px;
   line-height: 48px;
 
 }
@@ -124,6 +124,11 @@ img
   .fade-in {
     opacity: 0;
     animation: fadeIn 5s ease-in forwards;
+  }
+
+  .fade-in-faster {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
   }
 
   /* Fade out animation */
@@ -210,6 +215,7 @@ img
     }
   }
   
+
 
 
 
