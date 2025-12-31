@@ -31,7 +31,8 @@ a:visited{
 }
 
 p{
-    font-size: 36px;
+    font-size: 32px;
+    text-align: center;
 }
 
 figure {
@@ -219,6 +220,7 @@ img
     }
   }
   
+
 
 
 
