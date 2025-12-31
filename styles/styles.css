@@ -179,6 +179,11 @@ img
       margin-top:0px;
     }
 
+    p{
+    font-size: 12px;
+    text-align: center;
+    }
+
     .message{
       padding:20px;
       font-size:20px;
@@ -223,6 +228,7 @@ img
     }
   }
   
+
 
 
 
