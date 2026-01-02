@@ -193,7 +193,7 @@ img
 
     /* .border-item {
       width: 100px;
-      height: auto; /* or a set height if needed */
+      height: auto;
       transform: none;
     } */
     
@@ -216,6 +216,7 @@ img
     }
   }
   
+
 
 
 
