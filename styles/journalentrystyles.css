@@ -13,7 +13,7 @@ html, body {
     padding: 0;
     height: 100%;
 
-    background-image: url("../img/AntiqueSongJournal-PageBackground-v1.jpg");
+    background-image: url("../img/AntiqueSongJournal-PageBackground-v2.jpg");
     background-color: #642121; /* Fallback color if image doesn't load */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-size: cover; /* Scales the image to cover the entire element */
@@ -40,16 +40,16 @@ a:visited{
 
 a{
   line-height: 0;
-  color:#f1ebcf;
+  color:#642121;
   /* transition: color 0.15s ease; */
 }
 
 a:hover{
-  color: #f1ebcf;
+  color: #642121;
 }
 
 a:visited{
-  color:#f1ebcf;
+  color:#642121;
 }
 
 p{
