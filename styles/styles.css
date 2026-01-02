@@ -159,6 +159,12 @@ img
       width:35px;
     } */
 
+    .social-icon{
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* ie8 */
+    }
+
   @media screen and (max-width: 900px) {
 
       .wrapper-scale{
@@ -204,6 +210,7 @@ img
     }
   }
   
+
 
 
 
