@@ -12,9 +12,17 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #642121;
+
+    background-image: url("../img/ItchBackgroundv11.jpg");
+    background-color: #642121; /* Fallback color if image doesn't load */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Scales the image to cover the entire element */
+    background-position: center; /* Centers the image in the viewport */
+    background-attachment: fixed; /* Keeps the image fixed in place while scrolling (optional) */    
+    
+    /* background-color: #642121; */
     font-family: 'Munro', sans-serif;
-    color:#f1ebcf;
+    color:#642121;
     overflow-x: hidden;
     touch-action: manipulation;
 }
