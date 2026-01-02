@@ -123,6 +123,10 @@ img
       gap: 12px;
     }
 
+    /* .social-icon{
+      width:35px;
+    } */
+
   @media screen and (max-width: 900px) {
 
       .wrapper-scale{
@@ -168,6 +172,7 @@ img
     }
   }
   
+
 
 
 
