@@ -50,20 +50,6 @@ img
     height: auto;
 }
 
-/* .message {
-  font-size: 28px;
-  letter-spacing: 12px;
-  line-height: 28px;
-}
-
-.hint{
-  text-align:center;
-  letter-spacing: 2px;
-    font-size: 28px;
-  line-height: 48px;
-
-} */
-
 /* Containers */
 .main-content {
     display: flex;
@@ -96,23 +82,6 @@ img
     padding: 20px 0;
     box-sizing: border-box;
 }
-
-/* .top-row,
-.bottom-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.middle-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-grow: 1;
-    height:200px;
-} */
-
 
   /* Fade in animation */
 
@@ -157,10 +126,6 @@ img
 
   @media screen and (max-width: 700px) {
 
-    /* .hint{
-      margin-top:0px;
-    } */
-
     .centered-img{
       max-width:75%;
       margin-top:0px;
@@ -172,30 +137,10 @@ img
     text-align: center;
     }
 
-    /* .message{
-      padding:20px;
-      font-size:20px;
-      line-height:32px;
-    }
-
-    .middle-row {
-        height:350px;
-    } */
-
     .main-content {
       width: 100%;
       height:100%;
     }
-
-    /* .story-image{
-      height:950px;
-    } */
-
-    /* .border-item {
-      width: 100px;
-      height: auto;
-      transform: none;
-    } */
     
     .wrapper-scale{
       transform: none;
@@ -216,6 +161,7 @@ img
     }
   }
   
+
 
 
 
