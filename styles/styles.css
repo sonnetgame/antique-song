@@ -116,6 +116,13 @@ img
     }
   }
 
+  .social-icons{
+      margin-top:-16px;
+      margin-bottom:16px;
+      display:flex;
+      gap: 12px;
+    }
+
   @media screen and (max-width: 900px) {
 
       .wrapper-scale{
@@ -161,6 +168,7 @@ img
     }
   }
   
+
 
 
 
