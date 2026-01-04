@@ -15,31 +15,26 @@ html, body {
     /* line-height: auto; */
     display: block;
 
-    background-image: url("../img/AntiqueSongJournal-PageBackground-v3.jpg");
-    background-color: #642121; /* Fallback color if image doesn't load */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-size: cover; /* Scales the image to cover the entire element */
-    background-position: center; /* Centers the image in the viewport */
-    background-attachment: fixed; /* Keeps the image fixed in place while scrolling (optional) */    
+    background-color: #3a412b;
     
     /* background-color: #642121; */
     font-family: 'Munro', sans-serif;
-    color:#642121;
+    color:#f1ebcf;
     overflow-x: hidden;
     touch-action: manipulation;
 }
 
 a{
-  color:#642121;
+  color:#f1ebcf;
   /* transition: color 0.15s ease; */
 }
 
 a:hover{
-  color: #642121;
+  color: #f1ebcf;
 }
 
 a:visited{
-  color:#642121;
+  color:#f1ebcf;
 }
 
 p{
