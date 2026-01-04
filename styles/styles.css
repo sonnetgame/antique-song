@@ -19,17 +19,6 @@ html, body {
     touch-action: manipulation;
 }
 
-/* a{
-  display: inline-block;
-  line-height: auto;
-  color:#5b7560;
-
-}
-
-a:visited{
-  color:#5b7560;
-} */
-
 a{
   line-height: 0;
   color:#a77b1c;
@@ -154,10 +143,6 @@ img
       display:flex;
       gap: 12px;
     }
-
-    /* .social-icon{
-      width:35px;
-    } */
 
     .social-icon{
         max-width: 100%;
