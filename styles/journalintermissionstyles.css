@@ -7,6 +7,28 @@
     font-style: normal;
 }   
 
+/* script */
+@font-face {
+    font-family: 'Pixel-Script';
+    src: url('../fonts/pixel-script.otf.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}   
+
+/* script 2*/
+@font-face {
+  font-family: "FFScreenstarStdScriptRegular";
+  src: url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff2') format('woff2'), url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff') format('woff');
+}
+
+/* script 3*/
+@font-face {
+    font-family: 'pixel-script-other';
+    src: url('../fonts/pixel-script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}   
+
 /* Standard Overrides */
 html, body {
     margin: 0;
@@ -94,6 +116,19 @@ img
     max-height: 90vh;
     padding: 20px 0;
     box-sizing: border-box;
+}
+
+.script{
+      /* font-family: 'Pixel-Script', sans-serif; */
+      font-family: 'Pixel-Script';
+}
+
+.script2{
+      font-family:'FFScreenstarStdScriptRegular';
+}
+
+.script3{
+      font-family:'pixel-script-other';
 }
 
 .img{

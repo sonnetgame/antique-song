@@ -7,6 +7,30 @@
     font-style: normal;
 }   
 
+/* script */
+@font-face {
+    font-family: 'Pixel-Script';
+    src: url('../fonts/pixel-script.otf.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}   
+
+/* script 2*/
+@font-face {
+  font-family: "FFScreenstarStdScriptRegular";
+  src: url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff2') format('woff2'), url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff') format('woff');
+}
+
+
+/* script 3*/
+@font-face {
+    font-family: 'pixel-script-other';
+    src: url('../fonts/pixel-script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}   
+
+
 /* Standard Overrides */
 html, body {
     margin: 0;
@@ -43,12 +67,22 @@ a:visited{
 }
 
 p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 35px;
+    text-align: center;
+}
+
+h1{
     font-size: 22px;
     letter-spacing: 1px;
     margin-top: 0px;
     margin-bottom: 0px;
     line-height: 35px;
     text-align: center;
+    font-weight: normal;
 }
 
 figure {
@@ -115,12 +149,31 @@ img
 
 }
 
+.script{
+      /* font-family: 'Pixel-Script', sans-serif; */
+      font-family: 'Pixel-Script';
+}
+
+.script2{
+      font-family:'FFScreenstarStdScriptRegular';
+}
+
+.script3{
+      font-family:'pixel-script-other';
+}
+
+.secret{
+      color: rgb(172, 92, 165);
+}
+
+
+
 
   /* Fade in animation */
 
   .fade-in {
     opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
   }
 
   .fade-in-faster {
@@ -157,15 +210,34 @@ img
 
     p{
       font-size: 16px;
-        margin-top: 0px;
+      margin-top: 0px;
       margin-bottom: 0px;
       line-height: 25px;
     }
+
+    h1{
+      font-size: 20px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      line-height: 25px;
+      font-weight: normal;
+    }
   }
 
+      @media screen and (min-width: 700px) {
+    
+    .mobile-show{
+        display: none;      
+    }
+
+      }
 
       @media screen and (max-width: 700px) {
 
+
+    .mobile-show{
+        display: block;      
+    }
 
     .topspace
     {
@@ -196,6 +268,16 @@ img
     margin-bottom: 0px;
     line-height: 15px;
     text-align: center;
+    }
+
+    h1{
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 15px;
+    text-align: center;
+    font-weight: normal;
     }
 
     .main-content {
