@@ -118,6 +118,10 @@ img
     box-sizing: border-box;
 }
 
+.padtop {
+  padding-top:50px;
+}
+
 .script{
       /* font-family: 'Pixel-Script', sans-serif; */
       font-family: 'Pixel-Script';
