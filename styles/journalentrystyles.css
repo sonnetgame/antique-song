@@ -71,7 +71,7 @@ p{
     letter-spacing: 1px;
     margin-top: 0px;
     margin-bottom: 0px;
-    line-height: 35px;
+    line-height: 30px;
     text-align: center;
 }
 
@@ -301,6 +301,10 @@ img
 
     .mobile-hide{
       display:none;
+    }
+
+    .mobile-only{
+      height: 15px;
     }
   }
   

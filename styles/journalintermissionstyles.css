@@ -64,7 +64,7 @@ p{
     letter-spacing: 1px;
     margin-top: 0px;
     margin-bottom: 0px;
-    line-height: 35px;
+    line-height: 34px;
     text-align: center;
 }
 
@@ -153,6 +153,10 @@ img
   background-color:#2b301f;
 }
 
+.ending{
+  background-color:#642921;
+}
+
 
   /* Fade in animation */
 
@@ -198,12 +202,23 @@ img
       font-size: 20px;
         margin-top: 0px;
       margin-bottom: 0px;
-      line-height: 32px;
+      line-height: 31px;
     }
   }
 
+    @media screen and (min-width: 700px) {
+    
+    .mobile-show{
+        display: none;      
+    }
+
+      }
 
       @media screen and (max-width: 700px) {
+
+    .mobile-show{
+        display: block;      
+    }
 
     img
     {
@@ -221,13 +236,18 @@ img
       margin-top:0px;
     }
 
+    .smaller-img{
+      max-width:50%;
+      margin-top:0px;
+    }
+
     p{
     /* font-size: 11px; */
     font-size: 14px;
     letter-spacing: 1px;
     margin-top: 0px;
     margin-bottom: 0px;
-    line-height: 25px;
+    line-height: 24px;
     text-align: center;
     }
 
@@ -253,5 +273,21 @@ img
     .mobile-hide{
       display:none;
     }
+
+    .mobile-only{
+      height: 5px;
+    }
+
+    .script3{
+      font-family:'pixel-script-other';
+      font-size:12px;
+}
   }
+
+    @media screen and (max-width: 360px) {
+      .script3{
+      font-family:'pixel-script-other';
+      font-size:11px;
+          }
+    }
   
