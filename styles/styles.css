@@ -55,7 +55,6 @@ img
 }
 
 
-
 /* Containers */
 .main-content {
     display: flex;
@@ -91,7 +90,7 @@ img
 
 .img{
       max-width:65%;
-    }
+}
 
 .message{
   padding:20px;
@@ -129,7 +128,7 @@ img
     to {
         opacity: 0;
     }
-}
+  }
   
   @keyframes fadeIn {
     to {
@@ -144,11 +143,11 @@ img
       gap: 12px;
     }
 
-    .social-icon{
-        max-width: 100%;
-        height: auto;
-        width: auto\9; /* ie8 */
-    }
+  .social-icon{
+      max-width: 100%;
+      height: auto;
+      width: auto\9; /* ie8 */
+  }
 
   @media screen and (max-width: 900px) {
 

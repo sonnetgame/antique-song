@@ -1,5 +1,5 @@
 
-/* Font Declaration */
+/* Font Declarations */
 @font-face {
     font-family: 'Munro';
     src: url('../fonts/Munro-2LYe.ttf') format('truetype');
@@ -21,7 +21,6 @@
   src: url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff2') format('woff2'), url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff') format('woff');
 }
 
-
 /* script 3*/
 @font-face {
     font-family: 'pixel-script-other';
@@ -30,6 +29,7 @@
     font-style: normal;
 }   
 
+/* ================================================================= */
 
 /* Standard Overrides */
 html, body {
@@ -137,7 +137,7 @@ img
 
 .img{
       max-width:65%;
-    }
+}
 
 .message{
   padding:20px;
@@ -224,7 +224,7 @@ img
     }
   }
 
-      @media screen and (min-width: 700px) {
+  @media screen and (min-width: 700px) {
     
     .mobile-show{
         display: none;      
@@ -292,7 +292,6 @@ img
       display:flex;
       flex-direction: column;
       
-
     }
 
     .wrapper{

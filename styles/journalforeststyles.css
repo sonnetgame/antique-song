@@ -7,6 +7,30 @@
     font-style: normal;
 }   
 
+/* script */
+@font-face {
+    font-family: 'Pixel-Script';
+    src: url('../fonts/pixel-script.otf.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}   
+
+/* script 2*/
+@font-face {
+  font-family: "FFScreenstarStdScriptRegular";
+  src: url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff2') format('woff2'), url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff') format('woff');
+}
+
+/* script 3*/
+@font-face {
+    font-family: 'pixel-script-other';
+    src: url('../fonts/pixel-script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}   
+
+/* ================================================================= */
+
 /* Standard Overrides */
 html, body {
     margin: 0;
@@ -15,7 +39,7 @@ html, body {
     /* line-height: auto; */
     display: block;
 
-    background-color: #836183;
+    background-color: #3a412b;
     
     /* background-color: #642121; */
     font-family: 'Munro', sans-serif;
@@ -42,7 +66,7 @@ p{
     letter-spacing: 1px;
     margin-top: 0px;
     margin-bottom: 0px;
-    line-height: 35px;
+    line-height: 34px;
     text-align: center;
 }
 
@@ -96,6 +120,23 @@ img
     box-sizing: border-box;
 }
 
+.padtop {
+  padding-top:50px;
+}
+
+.script{
+      /* font-family: 'Pixel-Script', sans-serif; */
+      font-family: 'Pixel-Script';
+}
+
+.script2{
+      font-family:'FFScreenstarStdScriptRegular';
+}
+
+.script3{
+      font-family:'pixel-script-other';
+}
+
 .img{
       max-width:65%;
     }
@@ -110,17 +151,25 @@ img
 
 }
 
+.sidequest{
+  background-color:#2b301f;
+}
+
+.ending{
+  background-color:#642921;
+}
+
 
   /* Fade in animation */
 
   .fade-in {
     opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
+    animation: fadeIn 3s ease-in forwards;
   }
 
   .fade-in-faster {
     opacity: 0;
-    animation: fadeIn 3s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
   }
 
   /* Fade out animation */
@@ -151,15 +200,27 @@ img
     }
 
     p{
-      font-size: 16px;
+      /* font-size: 16px; */
+      font-size: 20px;
         margin-top: 0px;
       margin-bottom: 0px;
-      line-height: 25px;
+      line-height: 31px;
     }
   }
 
+    @media screen and (min-width: 700px) {
+    
+    .mobile-show{
+        display: none;      
+    }
+
+      }
 
       @media screen and (max-width: 700px) {
+
+    .mobile-show{
+        display: block;      
+    }
 
     img
     {
@@ -177,12 +238,18 @@ img
       margin-top:0px;
     }
 
+    .smaller-img{
+      max-width:50%;
+      margin-top:0px;
+    }
+
     p{
-    font-size: 11px;
+    /* font-size: 11px; */
+    font-size: 14px;
     letter-spacing: 1px;
     margin-top: 0px;
     margin-bottom: 0px;
-    line-height: 15px;
+    line-height: 24px;
     text-align: center;
     }
 
@@ -208,5 +275,21 @@ img
     .mobile-hide{
       display:none;
     }
+
+    .mobile-only{
+      height: 5px;
+    }
+
+    .script3{
+      font-family:'pixel-script-other';
+      font-size:12px;
+}
   }
+
+    @media screen and (max-width: 360px) {
+      .script3{
+      font-family:'pixel-script-other';
+      font-size:11px;
+          }
+    }
   
