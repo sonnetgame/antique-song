@@ -46,6 +46,8 @@ html, body {
     color:#f1ebcf;
     overflow-x: hidden;
     touch-action: manipulation;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 a{
@@ -190,6 +192,7 @@ img
     }
     to {
         opacity: 0;
+        
     }
 }
   
