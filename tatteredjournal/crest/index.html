@@ -9,73 +9,81 @@
     <link rel="icon" type="image/x-icon" href="../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
+
+
 <body class="sidequest" id="fadeBG">
-
     <div class="wrapper-scale crest" id="fade">
-
         <div class="main-content fade-in-faster">
             <p class="message">
                 
-            <div class="centered-img">
-                <img src="../../img/SonnetI-TatteredJournal-Crest-v4.png" title=" ">
+                <div class="centered-img">
+                    <img src="../../img/SonnetI-TatteredJournal-Crest-v4.png" title=" ">
 
-                <br><br><br class="mobile-hide">
-                <p style="text-align: center;">A red and gold enamel crestpin.</p> 
-                <br>
-                <p style="text-align: center;">These are typically used to denote status,</p>
-                <p style="text-align: center;">heritage, or guild affiliation.</p>
-                <br><br class="mobile-hide"><div class="mobile-only"></div>
-                <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/">This particular design is unfamiliar to you</a></p>
-            </div>
+                    <br><br><br class="mobile-hide">
+                    <p style="text-align: center;">A red and gold enamel crestpin.</p> 
+                    <br>
+                    <p style="text-align: center;">These are typically used to denote status,</p>
+                    <p style="text-align: center;">heritage, or guild affiliation.</p>
+                    <br><br class="mobile-hide"><div class="mobile-only"></div>
+                    <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/">This particular design is unfamiliar to you</a></p>
+                </div>
 
             </p>
         </div>
     </div>
 
+
+
     <script>
-    const smoothLinks = document.querySelectorAll('.smooth-link');
 
-    smoothLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const bgForFade = document.getElementById('fadeBG');
 
-            if(bgForFade)
-            {
-                bgForFade.classList.add('fade-out-DtL-F-BG');
-            }
+        // Fade out handlers
 
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
+        const smoothLinks = document.querySelectorAll('.smooth-link');
+
+        smoothLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const bgForFade = document.getElementById('fadeBG');
+
+                if(bgForFade)
+                {
+                    bgForFade.classList.add('fade-out-DtL-F-BG');
+                }
+
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
                 }, 500); 
             });
 
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const wrapperForFade = document.getElementById('fade');
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const wrapperForFade = document.getElementById('fade');
 
-            if(wrapperForFade)
-            {
-                wrapperForFade.classList.add('fade-out');
-            }
+                if(wrapperForFade)
+                {
+                    wrapperForFade.classList.add('fade-out');
+                }
 
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
                 }, 500); 
             });
-    });
+        });
 
-    window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+
+        // Force refresh on back button
+
+        window.addEventListener("pageshow", function(event) {
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+                if (historyTraversal) {
+                    window.location.reload();
+                }
+            });
 
     </script>
 

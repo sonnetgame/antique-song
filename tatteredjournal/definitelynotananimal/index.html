@@ -9,69 +9,74 @@
     <link rel="icon" type="image/x-icon" href="../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
+
+
 <body class="sidequest" id="fadeBG">
-
     <div class="wrapper-scale smalltext" id="fade">
-
         <div class="main-content fade-in-faster">
             <p class="message">
                 
-            <div class="centered-img">
-                <!-- <p style="text-align: center;"><a href="http://www.antiquesong.com/tatteredjournal/afigureinred">Definitely not an animal</a></p> -->
-                <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/afigureinred">Definitely not an animal</a></p>
-            </div>
+                <div class="centered-img">
+                    <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/afigureinred">Definitely not an animal</a></p>
+                </div>
 
             </p>
         </div>
     </div>
 
-    <script>
-    const smoothLinks = document.querySelectorAll('.smooth-link');
 
-    smoothLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const bgForFade = document.getElementById('fadeBG');
-
-            if(bgForFade)
-            {
-                bgForFade.classList.add('fade-out-DarkForToRed-BG');
-            }
-
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
-                }, 500); 
-            });
-
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const wrapperForFade = document.getElementById('fade');
-
-            if(wrapperForFade)
-            {
-                wrapperForFade.classList.add('fade-out');
-            }
-
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
-                }, 500); 
-            });
-    });
-    </script>
 
     <script>
 
-            window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+
+        // Fade-out handlers
+
+        const smoothLinks = document.querySelectorAll('.smooth-link');
+
+        smoothLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const bgForFade = document.getElementById('fadeBG');
+
+                if(bgForFade)
+                {
+                    bgForFade.classList.add('fade-out-DarkForToRed-BG');
+                }
+
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
+                }, 500); 
+            });
+
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const wrapperForFade = document.getElementById('fade');
+
+                if(wrapperForFade)
+                {
+                    wrapperForFade.classList.add('fade-out');
+                }
+
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
+                }, 500); 
+            });
+        });
+
+
+        // Force refresh on back button
+
+        window.addEventListener("pageshow", function(event) {
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
+        
     </script>
 
 </body>

@@ -9,32 +9,33 @@
     <link rel="icon" type="image/x-icon" href="../../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
+
+
 <body class="sidequest">
-
     <div class="wrapper-scale">
-
         <div class="main-content fade-in-faster">
-
-                
-            <div class="centered-img">
-                
-                <img src="../../../img/SonnetI-TatteredJournal-TornPage-v7.png" title=" ">                
-                
+               
+            <div class="centered-img">   
+                <img src="../../../img/SonnetI-TatteredJournal-TornPage-v7.png" title=" ">                          
             </div>
-
 
         </div>
     </div>
 
+
+
     <script>
 
-            window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+
+        // Force refresh on back button
+
+        window.addEventListener("pageshow", function(event) {
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
+
     </script>
 
 </body>

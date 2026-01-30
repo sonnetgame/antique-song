@@ -7,58 +7,66 @@
     <link rel="stylesheet" href="../../../styles/journalforeststyles.css"> 
 
     <link rel="icon" type="image/x-icon" href="../../../img/SonnetI-SonataForHalfshade-Favicon-v2.png">
-    
-
 </head>
+
+
 
 <body class="melody">
     <div class="wrapper-scale-pw smalltext">
         <div class="main-content fade-in-slower">
+
                 <p class="passwordtext">That song...</p><br>
-                    <form id="pswd" onsubmit="checkSongName(); return false;" class="passwordform">
-                    <input type="text" id="validate" placeholder="I think I know it.">            
-                    <button type="button" onclick="checkSongName()" style="display:none;"></button>
-                    </form>
+
+                <form id="pswd" onsubmit="checkSongName(); return false;" class="passwordform">
+                <input type="text" id="validate" placeholder="I think I know it.">            
+                <button type="button" onclick="checkSongName()" style="display:none;"></button>
+                </form>
+
         </div>
     </div>
 
 
-<script>
-    
-    function checkSongName() {
-        let inputPswd = document.getElementById("validate").value;
 
-        //////////////////////////////////////////////////////
-        //
-        //  You think back to the first time you heard it.
-        // 
-        //  A figure in pale lavender
-        //  was playing a handheld harp,
-        //  her song lamenting a distant memory.
-        //
-        //  She told you its name was...
-        //
-        //////////////////////////////////////////////////////
+    <script>
+        
+        function checkSongName() {
+            let inputPswd = document.getElementById("validate").value;
 
-        let correctPswd = "sonataforhalfshade";
 
-        if (inputPswd === correctPswd) {
-            // window.location.href="http://sonataforhalfshade.com";
-            window.location.href="https://www.youtube.com/watch?v=KYuZ5u_E2IE";
-        } else {
-            alert("Hmm. No, that wasn't it..");
+
+            //////////////////////////////////////////////////////
+            //
+            //  You think back to the first time you heard it.
+            // 
+            //  A figure in pale lavender
+            //  was playing a handheld harp,
+            //  her song lamenting a distant memory.
+            //
+            //  She told you its name was...
+            //
+            //////////////////////////////////////////////////////
+
+            let correctPswd = "sonataforhalfshade";
+
+
+
+            if (inputPswd === correctPswd) {
+                window.location.href="https://www.youtube.com/watch?v=KYuZ5u_E2IE";
+            } else {
+                alert("Hmm. No, that wasn't it..");
+            }
         }
-    }
 
+
+        
         window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
 
-</script>
+    </script>
 
 </body>
 </html>

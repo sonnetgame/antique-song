@@ -9,27 +9,32 @@
     <link rel="icon" type="image/x-icon" href="../../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
-<body class="sidequest">
-    
-    <div class="wrapper-scale" id="fade">
 
+
+<body class="sidequest">
+    <div class="wrapper-scale" id="fade">
         <div class="main-content fade-in-faster">
             <p class="message">
                 
-            <div class="centered-img">
-                <p style="text-align: center;">You notice that a folded piece of paper</p>
-                <p style="text-align: center;">has fallen out of the journal</p>
-                <p style="text-align: center;">onto the leaves beneath you.</p>
-                <br><br class="mobile-hide"><div class="mobile-only"></div>
-                <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/adistantsound/foldedpaper">Pick it up</a></p>
-                
-            </div>
+                <div class="centered-img">
+                    <p style="text-align: center;">You notice that a folded piece of paper</p>
+                    <p style="text-align: center;">has fallen out of the journal</p>
+                    <p style="text-align: center;">onto the leaves beneath you.</p>
+                    <br><br class="mobile-hide"><div class="mobile-only"></div>
+                    <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/adistantsound/foldedpaper">Pick it up</a></p>                   
+                </div>
 
             </p>
         </div>
     </div>
 
+
+
     <script>
+
+
+        // Fade-out handler
+
         const smoothLinks = document.querySelectorAll('.smooth-link');
 
         smoothLinks.forEach(link => {
@@ -46,17 +51,20 @@
 
                 setTimeout(() => {
                     window.location.href = destinationUrl; 
-                    }, 500); 
+                }, 500); 
             });
         });
 
-            window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+
+        // Force refresh on back button
+
+        window.addEventListener("pageshow", function(event) {
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
+        
     </script>
 
 </body>

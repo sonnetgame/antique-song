@@ -9,13 +9,13 @@
     <link rel="icon" type="image/x-icon" href="../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
+
+
 <body>
-
     <div class="wrapper-scale" id="fade">
-
         <div class="main-content fade-in">
             <p class="message">
-                
+
             <div class="centered-img">
                 <h1 style="text-align: center;"><br><b>Entry # 42</b></h1>
                 <br><br class="mobile-hide"><div class="mobile-only"></div>
@@ -48,34 +48,43 @@
         </div>
     </div>
 
+
+
     <script>
-    const smoothLinks = document.querySelectorAll('.smooth-link');
 
-    smoothLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const wrapperForFade = document.getElementById('fade');
 
-            if(wrapperForFade)
-            {
-                wrapperForFade.classList.add('fade-out');
-            }
+        // Fade-out handler
 
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
+        const smoothLinks = document.querySelectorAll('.smooth-link');
+
+        smoothLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const wrapperForFade = document.getElementById('fade');
+
+                if(wrapperForFade)
+                {
+                    wrapperForFade.classList.add('fade-out');
+                }
+
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
                 }, 500); 
+            });
         });
-    });
+
+
+        // Force refresh on back button
 
         window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
+        
     </script>
 
 </body>

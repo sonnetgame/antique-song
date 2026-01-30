@@ -9,78 +9,85 @@
     <link rel="icon" type="image/x-icon" href="../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
+
+
 <body id="fadeBG">
-
     <div class="wrapper-scale" id="fade">
-
         <div class="main-content fade-in">
             <p class="message">
                 
-            <div class="centered-img">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 260 242">
-                <!-- <image width="260" height="242" xlink:href="../img/SonnetI-TatteredJournal-v3.png"></image> <a xlink:href="http://www.antiquesong.com/tatteredjournal/crest"> -->
-                <image width="260" height="242" xlink:href="../img/SonnetI-TatteredJournal-v3.png"></image> <a xlink:href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/crest">
-                <rect x="166" y="27" fill="#fff" opacity="0" width="50" height="50"><title>An Enamel Crestpin</title></rect>
-                </a>
-                </svg>
+                <div class="centered-img">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 260 242">
+                    <image width="260" height="242" xlink:href="../img/SonnetI-TatteredJournal-v3.png"></image> <a xlink:href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/crest">
+                    <rect x="166" y="27" fill="#fff" opacity="0" width="50" height="50"><title>An Enamel Crestpin</title></rect>
+                    </a>
+                    </svg>
 
-                <br><br><br><br class="mobile-hide">
-                <p style="text-align: center;">In the mossy hollow of an old juniper tree,</p> 
-                <p style="text-align: center;">you find a tattered journal.</p>
+                    <br><br><br><br class="mobile-hide">
+                    <p style="text-align: center;">In the mossy hollow of an old juniper tree,</p> 
+                    <p style="text-align: center;">you find a tattered journal.</p>
 
-                <br><br class="mobile-hide"><div class="mobile-only"></div>
-                <p style="text-align: center;"><a href="http://www.antiquesong.com/tatteredjournal/journalentry38">Look inside?</a></p>
-                 <!-- <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/journalentry38">Look inside?</a></p> -->
-            </div>
+                    <br><br class="mobile-hide"><div class="mobile-only"></div>
+                    <p style="text-align: center;"><a href="http://www.antiquesong.com/tatteredjournal/journalentry38">Look inside?</a></p>
+                </div>
 
             </p>
         </div>
     </div>
 
+
+
     <script>
-    const smoothLinks = document.querySelectorAll('.smooth-link');
 
-    smoothLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const bgForFade = document.getElementById('fadeBG');
 
-            if(bgForFade)
-            {
-                bgForFade.classList.add('fade-out-LtD-F-BG');
-            }
+        // Fade-out handlers
 
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
+        const smoothLinks = document.querySelectorAll('.smooth-link');
+
+        smoothLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const bgForFade = document.getElementById('fadeBG');
+
+                if(bgForFade)
+                {
+                    bgForFade.classList.add('fade-out-LtD-F-BG');
+                }
+
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
                 }, 500); 
             });
 
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const wrapperForFade = document.getElementById('fade');
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const wrapperForFade = document.getElementById('fade');
 
-            if(wrapperForFade)
-            {
-                wrapperForFade.classList.add('fade-out');
-            }
+                if(wrapperForFade)
+                {
+                    wrapperForFade.classList.add('fade-out');
+                }
 
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
                 }, 500); 
             });
-    });
+        });
+
+
+        // Force refresh on back button
 
         window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
+
 
     </script>
 

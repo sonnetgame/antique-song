@@ -9,58 +9,67 @@
     <link rel="icon" type="image/x-icon" href="../../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
+
+
 <body class="sidequest">
-
     <div class="wrapper-scale" id="fade">
-
         <div class="main-content fade-in-faster">
             <p class="message">
                 
-            <div class="centered-img">
-                <img src="../../../img/SonnetI-TatteredJournal-FoldedPaper-v3.png" title=" " class="smaller-img">
+                <div class="centered-img">
+                    <img src="../../../img/SonnetI-TatteredJournal-FoldedPaper-v3.png" title=" " class="smaller-img">
 
-                <br><br class="mobile-hide"><div class="mobile-only"></div><br class="mobile-hide"><div class="mobile-only"></div>
-                <p class="script3" >Thought you'd appreciate this amusing portrait.</p>
-                <p class="script3">Can you believe the price they're offering?</p>
-                <p class="script3">You should be flattered.</p>
-                <br>
-                <p class="script3">-C</p>
-                <br><br class="mobile-hide"><div class="mobile-only"></div>
-                <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/adistantsound/unfoldedpaper">Unfold it</a></p>
-            </div>
+                    <br><br class="mobile-hide"><div class="mobile-only"></div><br class="mobile-hide"><div class="mobile-only"></div>
+                    <p class="script3" >Thought you'd appreciate this amusing portrait.</p>
+                    <p class="script3">Can you believe the price they're offering?</p>
+                    <p class="script3">You should be flattered.</p>
+                    <br>
+                    <p class="script3">-C</p>
+                    <br><br class="mobile-hide"><div class="mobile-only"></div>
+                    <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/adistantsound/unfoldedpaper">Unfold it</a></p>
+                </div>
 
             </p>
         </div>
     </div>
 
+
+
     <script>
-    const smoothLinks = document.querySelectorAll('.smooth-link');
 
-    smoothLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const wrapperForFade = document.getElementById('fade');
 
-            if(wrapperForFade)
-            {
-                wrapperForFade.classList.add('fade-out');
-            }
+        // Fade-out handler
 
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
+        const smoothLinks = document.querySelectorAll('.smooth-link');
+
+        smoothLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const wrapperForFade = document.getElementById('fade');
+
+                if(wrapperForFade)
+                {
+                    wrapperForFade.classList.add('fade-out');
+                }
+
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
                 }, 500); 
+            });
         });
-    });
+
+
+        // Force refresh on back button
 
         window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
+        
     </script>
 
 </body>

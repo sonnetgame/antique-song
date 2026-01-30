@@ -7,75 +7,82 @@
     <link rel="stylesheet" href="../../styles/journalentrystyles.css"> 
 
     <link rel="icon" type="image/x-icon" href="../../img/SonnetI-TatteredJournal-Favicon-v3.png">
-
 </head>
 
+
+
 <body>
-
     <div class="wrapper-scale" id="fade">
-
         <div class="main-content fade-in">
             <p class="message">
                 
-            <div class="centered-img">
-                <h1 style="text-align: center;"><br><b>Entry # 38</b></h1>
-                <br><br class="mobile-hide"><div class="mobile-only"></div>
+                <div class="centered-img">
+                    <h1 style="text-align: center;"><br><b>Entry # 38</b></h1>
+                    <br><br class="mobile-hide"><div class="mobile-only"></div>
 
-                <div class="script">
-                    <p>Busy morning.</p>
+                    <div class="script">
+                        <p>Busy morning.</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>we came across a lost pilgrim<br class="mobile-show"> in the woods near lake a<span class="secret">s</span>tre.</p>
+                        <p>the others held him down while i cut his bloom.</p>
+                        <p>he fought back. i would have too.</p>
+                        <p>but one day he’ll realize we did him a favor.</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>clover caught wind of an<span class="secret">o</span>ther party headed out west<br class="mobile-show"> towards the greater plateaus,</p>
+                        <p>a young woman and an old man.</p>
+                        <p>the plan is for me to split off on my own to track them</p>
+                        <p>while the rest of our group patrols the east.</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>not looking forward to the heat, but at least i’ll be <br class="mobile-show">do<span class="secret">n</span>e with this insipid rain for a while.</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>---</p>
+                    </div>
+
                     <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>we came across a lost pilgrim<br class="mobile-show"> in the woods near lake a<span class="secret">s</span>tre.</p>
-                    <p>the others held him down while i cut his bloom.</p>
-                    <p>he fought back. i would have too.</p>
-                    <p>but one day he’ll realize we did him a favor.</p>
-                    <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>clover caught wind of an<span class="secret">o</span>ther party headed out west<br class="mobile-show"> towards the greater plateaus,</p>
-                    <p>a young woman and an old man.</p>
-                    <p>the plan is for me to split off on my own to track them</p>
-                    <p>while the rest of our group patrols the east.</p>
-                    <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>not looking forward to the heat, but at least i’ll be <br class="mobile-show">do<span class="secret">n</span>e with this insipid rain for a while.</p>
-                    <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>---</p>
+                    <h1><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/journalentry39">Keep reading</a></h1>
+                    <br><br><br>
                 </div>
-
-                <br class="mobile-hide"><div class="mobile-only"></div>
-                <h1><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/journalentry39">Keep reading</a></h1>
-                <br><br><br>
-            </div>
 
             </p>
         </div>
     </div>
 
+
+
     <script>
-    const smoothLinks = document.querySelectorAll('.smooth-link');
 
-    smoothLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const wrapperForFade = document.getElementById('fade');
 
-            if(wrapperForFade)
-            {
-                wrapperForFade.classList.add('fade-out');
-            }
+        // Fade-out handlers
 
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
+        const smoothLinks = document.querySelectorAll('.smooth-link');
+
+        smoothLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const wrapperForFade = document.getElementById('fade');
+
+                if(wrapperForFade)
+                {
+                    wrapperForFade.classList.add('fade-out');
+                }
+
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
                 }, 500); 
+            });
         });
-    });
+
+
+        // Force refresh on back button
 
         window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
 
     </script>
 

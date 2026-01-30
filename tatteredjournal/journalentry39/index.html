@@ -9,77 +9,85 @@
     <link rel="icon" type="image/x-icon" href="../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
+
+
 <body>
-
     <div class="wrapper-scale" id="fade">
-
         <div class="main-content fade-in">
             <p class="message">
                 
-            <div class="centered-img">
-                <h1 style="text-align: center;"><br><b>Entry # 39</b></h1>
-                <br><br class="mobile-hide"><div class="mobile-only"></div>
-                
-                <div class="script">
-                    <p>I confronted that duo today, <br class="mobile-show">but they got away.</p>
-                    <p>somehow?</p>
-                    <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>it h<span class="secret">a</span>ppened faster than i could understand.</p>
-                    <p>i had them cornered by the rootway on-ramp<br class="mobile-show"> and then something... flashed.</p>
-                    <p>the rocks on the cliff above us shifted.</p>
-                    <p>stones fell. dust sca<span class="secret">t</span>tered.</p>
-                    <p>they fled.</p>
-                    <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>i've run through it a few times in my head <br class="mobile-show">but i still can’t quite figure it out.</p>
-                    <p>the old man doesn’t bear a bloom <br class="mobile-show">and the girl looked as surprised as i was,</p>
-                    <p>so i only h<span class="secret">a</span>ve guesses as to what actually happened.</p>
-                    <p>a strange clash of fate i suppose.</p>
-                    <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>whatever.</p>
-                    <p>no use in getting distracted by frustration.</p>
-                    <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>they can't have gotten <span class="secret">f</span>ar.</p>
-                    <br class="mobile-hide"><div class="mobile-only"></div>
-                    <p>---</p>
-                </div>
+                <div class="centered-img">
+                    <h1 style="text-align: center;"><br><b>Entry # 39</b></h1>
+                    <br><br class="mobile-hide"><div class="mobile-only"></div>
+                    
+                    <div class="script">
+                        <p>I confronted that duo today, <br class="mobile-show">but they got away.</p>
+                        <p>somehow?</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>it h<span class="secret">a</span>ppened faster than i could understand.</p>
+                        <p>i had them cornered by the rootway on-ramp<br class="mobile-show"> and then something... flashed.</p>
+                        <p>the rocks on the cliff above us shifted.</p>
+                        <p>stones fell. dust sca<span class="secret">t</span>tered.</p>
+                        <p>they fled.</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>i've run through it a few times in my head <br class="mobile-show">but i still can’t quite figure it out.</p>
+                        <p>the old man doesn’t bear a bloom <br class="mobile-show">and the girl looked as surprised as i was,</p>
+                        <p>so i only h<span class="secret">a</span>ve guesses as to what actually happened.</p>
+                        <p>a strange clash of fate i suppose.</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>whatever.</p>
+                        <p>no use in getting distracted by frustration.</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>they can't have gotten <span class="secret">f</span>ar.</p>
+                        <br class="mobile-hide"><div class="mobile-only"></div>
+                        <p>---</p>
+                    </div>
 
-                <br class="mobile-hide"><div class="mobile-only"></div>
-                <h1><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/journalentry40">Keep reading</a></h1>
-                <br><br><br>
-            </div>
+                    <br class="mobile-hide"><div class="mobile-only"></div>
+                    <h1><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/journalentry40">Keep reading</a></h1>
+                    <br><br><br>
+                </div>
 
             </p>
         </div>
     </div>
 
+
+
     <script>
-    const smoothLinks = document.querySelectorAll('.smooth-link');
 
-    smoothLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            const destinationUrl = this.getAttribute('data-href');
-            const wrapperForFade = document.getElementById('fade');
 
-            if(wrapperForFade)
-            {
-                wrapperForFade.classList.add('fade-out');
-            }
+        // Fade-out handlers
 
-            setTimeout(() => {
-                window.location.href = destinationUrl; 
+        const smoothLinks = document.querySelectorAll('.smooth-link');
+
+        smoothLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const destinationUrl = this.getAttribute('data-href');
+                const wrapperForFade = document.getElementById('fade');
+
+                if(wrapperForFade)
+                {
+                    wrapperForFade.classList.add('fade-out');
+                }
+
+                setTimeout(() => {
+                    window.location.href = destinationUrl; 
                 }, 500); 
+            });
         });
-    });
 
-    window.addEventListener("pageshow", function(event) {
-    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore, e.g., reload the page to get fresh content
-        window.location.reload();
-    }
-    });
+
+        // Force refresh on back button
+
+        window.addEventListener("pageshow", function(event) {
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
 
     </script>
 
