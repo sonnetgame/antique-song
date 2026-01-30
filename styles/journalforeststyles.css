@@ -237,6 +237,11 @@ button {
     animation: fadeIn 1s ease-in forwards;
   }
 
+  .fade-in-slower {
+    opacity: 0;
+    animation: fadeIn 5s ease-in forwards;
+  }
+
   /* Fade out animation */
 
   .fade-out {
