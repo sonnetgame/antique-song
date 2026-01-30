@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="wrapper-scale">
+    <div class="wrapper-scale" id="fade">
 
         <div class="main-content fade-in">
             <p class="message">
@@ -40,13 +40,35 @@
                 </div>
 
                 <br><br class="mobile-hide"><div class="mobile-only"></div>
-                <h1><a href="http://www.antiquesong.com/tatteredjournal/journalentry39">Keep reading</a></h1>
+                <h1><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/journalentry39">Keep reading</a></h1>
                 <br><br><br>
             </div>
 
             </p>
         </div>
     </div>
+
+    <script>
+    const smoothLinks = document.querySelectorAll('.smooth-link');
+
+    smoothLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const wrapperForFade = document.getElementById('fade');
+
+            if(wrapperForFade)
+            {
+                wrapperForFade.classList.add('fade-out');
+            }
+
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
+        });
+    });
+    </script>
 
 </body>
 </html>

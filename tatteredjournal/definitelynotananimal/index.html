@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
-<body class="sidequest">
+<body class="sidequest" >
 
     <div class="wrapper-scale">
 
@@ -17,12 +17,50 @@
             <p class="message">
                 
             <div class="centered-img">
-                <p style="text-align: center;"><a href="http://www.antiquesong.com/tatteredjournal/afigureinred">Definitely not an animal</a></p>
+                <p style="text-align: center;"><a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/afigureinred">Definitely not an animal</a></p>
             </div>
 
             </p>
         </div>
     </div>
+
+    <!-- <script>
+    const smoothLinks = document.querySelectorAll('.smooth-link');
+
+    smoothLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const bgForFade = document.getElementById('fadeBG');
+
+            if(bgForFade)
+            {
+                bgForFade.classList.add('fade-out-DarkForToRed-BG');
+            }
+
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
+            });
+
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const wrapperForFade = document.getElementById('fade');
+
+            if(wrapperForFade)
+            {
+                wrapperForFade.classList.add('fade-out');
+            }
+
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
+            });
+    });
+    </script> -->
 
 </body>
 </html>

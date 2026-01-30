@@ -9,9 +9,9 @@
     <link rel="icon" type="image/x-icon" href="../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
-<body class="ending">
+<body class="ending" id="fadeBG">
 
-    <div class="wrapper-scale">
+    <div class="wrapper-scale" id="fade">
 
         <div class="main-content fade-in-faster">
             <p class="message">
@@ -20,9 +20,9 @@
                 <!-- <p>A figure in red,</p>
                 <p>humming a haunting melody.</p> -->
 
-                <p>A figure in red,</p>
+                <p>A figure in red</p>
                 <p>clad in well-worn finery,</p>
-                <p><a href="http://antiquesong.com/tatteredjournal/afigureinred/thehiddenmelody">humming a haunting melody</a>.</p>
+                <p><a href="#" class="smooth-link" data-href="http://antiquesong.com/tatteredjournal/afigureinred/thehiddenmelody">humming a haunting melody</a>.</p>
 
                 <!-- <p>A figure in red,</p>
                 <p>humming a haunting melody.</p> -->
@@ -40,6 +40,44 @@
             </p>
         </div>
     </div>
+
+    <script>
+    const smoothLinks = document.querySelectorAll('.smooth-link');
+
+    smoothLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const bgForFade = document.getElementById('fadeBG');
+
+            if(bgForFade)
+            {
+                bgForFade.classList.add('fade-out-RedToPW-BG');
+            }
+
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
+            });
+
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const wrapperForFade = document.getElementById('fade');
+
+            if(wrapperForFade)
+            {
+                wrapperForFade.classList.add('fade-out');
+            }
+
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
+            });
+    });
+    </script>
 
 </body>
 </html>

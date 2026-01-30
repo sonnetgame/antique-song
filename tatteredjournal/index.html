@@ -9,17 +9,17 @@
     <link rel="icon" type="image/x-icon" href="../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
-<body>
+<body id="fadeBG">
 
-    <div class="wrapper-scale">
+    <div class="wrapper-scale" id="fade">
 
         <div class="main-content fade-in">
             <p class="message">
                 
             <div class="centered-img">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 260 242">
-                <image width="260" height="242" xlink:href="../img/SonnetI-TatteredJournal-v3.png"></image> <a xlink:href="http://www.antiquesong.com/tatteredjournal/crest">
-                <!-- <image width="260" height="242" xlink:href="../img/SonnetI-TatteredJournal-v3.png"></image> <a xlink:href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/crest"> -->
+                <!-- <image width="260" height="242" xlink:href="../img/SonnetI-TatteredJournal-v3.png"></image> <a xlink:href="http://www.antiquesong.com/tatteredjournal/crest"> -->
+                <image width="260" height="242" xlink:href="../img/SonnetI-TatteredJournal-v3.png"></image> <a xlink:href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/crest">
                 <rect x="166" y="27" fill="#fff" opacity="0" width="50" height="50"><title>An Enamel Crestpin</title></rect>
                 </a>
                 </svg>
@@ -37,25 +37,43 @@
         </div>
     </div>
 
-    <!-- <script>
-        const smoothLinks = document.querySelectorAll('.smooth-link');
+    <script>
+    const smoothLinks = document.querySelectorAll('.smooth-link');
 
-        smoothLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault(); // Prevent the browser from immediately following the link
-                
-                const destinationUrl = this.getAttribute('data-href'); // Get the URL from the data attribute
-                const body = document.body;
+    smoothLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const bgForFade = document.getElementById('fadeBG');
 
-                body.classList.add('fade-out'); // Add the fade-out class to the body
+            if(bgForFade)
+            {
+                bgForFade.classList.add('fade-out-LtD-F-BG');
+            }
 
-                // Wait for the animation to complete (0.5s in the CSS example)
-                setTimeout(() => {
-                    window.location.href = destinationUrl; // Redirect to the new page
-                }, 500); // The delay must match the CSS transition/animation duration
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
             });
-        });
-    </script> -->
+
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const wrapperForFade = document.getElementById('fade');
+
+            if(wrapperForFade)
+            {
+                wrapperForFade.classList.add('fade-out');
+            }
+
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
+            });
+    });
+    </script>
 
 </body>
 </html>

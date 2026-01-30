@@ -9,9 +9,9 @@
     <link rel="icon" type="image/x-icon" href="../../img/SonnetI-TatteredJournal-Favicon-v3.png">
 </head>
 
-<body>
+<body id="fadeBG">
 
-    <div class="wrapper-scale">
+    <div class="wrapper-scale" id="fade">
 
         <div class="main-content fade-in-faster">
             <p class="message">
@@ -23,7 +23,7 @@
                 <p style="text-align: center;">so the noise surely came from the local wildlife.</p>
                 
                 <p style="text-align: center;">As easy as it is to be concerned,</p>
-                <p style="text-align: center;">the sounds of the lonely forest <br class="mobile-show">are rarely <a href="http://www.antiquesong.com/tatteredjournal/adistantsound/fallenpaper">hostile</a>.</p>
+                <p style="text-align: center;">the sounds of the lonely forest <br class="mobile-show">are rarely <a href="#" class="smooth-link" data-href="http://www.antiquesong.com/tatteredjournal/adistantsound/fallenpaper">hostile</a>.</p>
                 <br>
                 <p style="text-align: center;">They are, however, abundant.</p>
                 <br>
@@ -36,6 +36,43 @@
         </div>
     </div>
 
+    <script>
+    const smoothLinks = document.querySelectorAll('.smooth-link');
+
+    smoothLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const bgForFade = document.getElementById('fadeBG');
+
+            if(bgForFade)
+            {
+                bgForFade.classList.add('fade-out-LtD-F-BG');
+            }
+
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
+            });
+
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            const destinationUrl = this.getAttribute('data-href');
+            const wrapperForFade = document.getElementById('fade');
+
+            if(wrapperForFade)
+            {
+                wrapperForFade.classList.add('fade-out');
+            }
+
+            setTimeout(() => {
+                window.location.href = destinationUrl; 
+                }, 500); 
+            });
+    });
+    </script>
 
 </body>
 </html>

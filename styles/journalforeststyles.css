@@ -125,6 +125,8 @@ img
     padding: 20px 0;
     box-sizing: border-box;
     transition: all .5s;
+
+
 }
 
 .wrapper-scale-pw {
@@ -145,7 +147,7 @@ img
 
 .passwordform{
 
-  border: 4px solid rgb(153, 90, 147);
+  border: 4px solid rgb(165, 93, 158);
   border-radius: 3px;
   /* background-color: #3CBC8D; */
 
@@ -201,7 +203,7 @@ button {
     font-family: 'Munro', sans-serif;
   font-size: 16px; 
   /* color: #333; */
-  color: rgb(153, 90, 147);
+  color: rgb(165, 93, 158);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -218,7 +220,10 @@ button {
 }
 
 
-
+.darkforestbg
+{
+  background-color: red;
+}
 
   /* Fade in animation */
 
@@ -238,12 +243,75 @@ button {
     animation: fadeOut 0.5s ease forwards;
   }
 
+  .fade-out-LtD-F-BG {
+    animation: fadeOutLightToDarkForestBG 0.5s ease forwards;
+  }
+
+  .fade-out-DtL-F-BG {
+    animation: fadeOutDarkToLightForestBG 0.5s ease forwards;
+  }
+
+  .fade-out-DarkForToRed-BG {
+    animation: fadeOutDarkForToRedBG 0.5s ease forwards;
+  }
+
+  .fade-out-RedToPW-BG {
+    animation: fadeOutRedToPWBG 0.5s ease forwards;
+  }
+
+    @keyframes fadeOutRedToPWBG {
+    from {
+        /* opacity: 1; */
+        background-color:#642921;
+    }
+    to {
+        /* opacity: 0; */
+          background-color:#222222;
+    }
+  }
+
+    @keyframes fadeOutDarkForToRedBG {
+    from {
+        /* opacity: 1; */
+        background-color:#2b301f;
+    }
+    to {
+        /* opacity: 0; */
+        background-color:#642921;
+    }
+  }
+
+    @keyframes fadeOutLightToDarkForestBG {
+    from {
+        /* opacity: 1; */
+        background-color: #3a412b;
+    }
+    to {
+        /* opacity: 0; */
+        background-color:#2b301f;
+    }
+  }
+
+    @keyframes fadeOutDarkToLightForestBG {
+    from {
+        /* opacity: 1; */
+        background-color:#2b301f;
+        
+    }
+    to {
+        /* opacity: 0; */
+        background-color: #3a412b;
+    }
+  }
+
 @keyframes fadeOut {
     from {
         opacity: 1;
+ 
     }
     to {
         opacity: 0;
+
         
     }
 }
