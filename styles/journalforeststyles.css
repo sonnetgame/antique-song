@@ -198,11 +198,11 @@ input,
 select,
 textarea,
 button {
-      font-family: 'Munro', sans-serif;
-  /* You can add other properties here too */
+    font-family: 'Munro', sans-serif;
   font-size: 16px; 
   /* color: #333; */
   color: rgb(153, 90, 147);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .sidequest{
