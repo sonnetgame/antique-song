@@ -237,7 +237,7 @@ img
 
   @media screen and (max-height: 550px) {
 
-    .wrapper-scale {
+    /* .wrapper-scale {
 
     justify-content: space-between;
       transition: all .5s;
@@ -246,10 +246,22 @@ img
     .main-content {
       padding-bottom:150px;
       transform: scale(0.8);
-      /* height:auto; */
       transition: all .5s;
-    }
+    } */
   }
+
+    @media screen and (max-height: 450px) {
+
+      .wrapper-scale{
+            justify-content: space-between;
+      /* transform: scale(0.7); */
+        transition: all .5s;
+      }
+
+      .main-content{
+        padding-bottom:100px;
+      }
+    }
 
   @media screen and (max-width: 900px) {
 

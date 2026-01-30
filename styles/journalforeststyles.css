@@ -327,7 +327,11 @@ button {
     }
   }
 
+
+  
   @media screen and (max-height: 550px) {
+
+
 
     .wrapper-scale {
 
@@ -335,10 +339,26 @@ button {
       transition: all .5s;
     }
 
+        .smalltext
+    {
+          justify-content: center;
+      transition: all .5s;
+    }
+
     .main-content {
       padding-bottom:150px;
       transition: all .5s;
     }
+  }
+
+    @media screen and (max-height: 250px) {
+
+        .smalltext
+    {
+          justify-content: space-between;
+      transition: all .5s;
+    }
+    
   }
 
   @media screen and (max-width: 900px) {
@@ -432,6 +452,13 @@ button {
       font-family:'pixel-script-other';
       font-size:12px;
 }
+
+    .crest{
+      height:95vh;
+      
+
+    }
+
   }
 
     @media screen and (max-width: 360px) {
