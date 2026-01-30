@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hidden Melody</title> 
+    <link rel="stylesheet" href="../../../styles/journalforeststyles.css"> 
+
+    <link rel="icon" type="image/x-icon" href="../../../img/SonnetI-TatteredJournal-Favicon-v3.png">
+    
+
+</head>
+
+<body class="melody">
+
+
+    <div class="wrapper-scale-pw">
+
+        <div class="main-content fade-in-faster">
+
+
+                <p class="passwordtext">That melody...</p>
+                <br>
+                    <form id="pswd" onsubmit="checkMelodyName(); return false;" class="passwordform">
+                    <input type="password" id="validate" placeholder="I think I know that song...">
+                    
+                    <button type="button" onclick="checkMelodyName()" style="display:none;"></button>
+                    </form>
+
+                
+            
+
+
+        </div>
+    </div>
+
+
+<script>
+    function checkMelodyName() {
+        let inputPswd = document.getElementById("validate").value;
+        let correctPswd = "sonataforhalfshade";
+        if (inputPswd === correctPswd) {
+            window.location.href="http://sonataforhalfshade.com";
+        } else {
+            alert("No, that wasn't it..");
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

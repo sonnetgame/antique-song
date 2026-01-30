@@ -100,6 +100,7 @@ img
     transition: all .5s;
 }
 
+
 /* .wrapper-scale {
   height:100%;
   transform: scale(0.7);
@@ -124,6 +125,30 @@ img
     padding: 20px 0;
     box-sizing: border-box;
     transition: all .5s;
+}
+
+.wrapper-scale-pw {
+  height: 100%;
+  /* transform: scale(0.7); */
+  transform-origin: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    max-height: 200vh;
+    padding: 20px 0;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+.passwordform{
+
+  border: 4px solid rgb(153, 90, 147);
+  border-radius: 3px;
+  /* background-color: #3CBC8D; */
+
 }
 
 
@@ -159,6 +184,27 @@ img
 
 }
 
+.passwordtext{
+  /* padding:20px; */
+  font-size: 16px;
+  text-align:center;
+  letter-spacing: 1px;
+  line-height: auto;
+  margin-bottom:0;
+
+}
+
+input,
+select,
+textarea,
+button {
+      font-family: 'Munro', sans-serif;
+  /* You can add other properties here too */
+  font-size: 16px; 
+  /* color: #333; */
+  color: rgb(153, 90, 147);
+}
+
 .sidequest{
   background-color:#2b301f;
 }
@@ -166,6 +212,12 @@ img
 .ending{
   background-color:#642921;
 }
+
+.melody{
+  background-color:#222222;
+}
+
+
 
 
   /* Fade in animation */
