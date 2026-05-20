@@ -16,12 +16,6 @@
   font-style: normal;
 }   
 
-/* script 2*/
-@font-face {
-  font-family: "FFScreenstarStdScriptRegular";
-  src: url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff2') format('woff2'), url('../fonts/webFonts/FFScreenstarStdScriptRegular/font.woff') format('woff');
-}
-
 /* script 3*/
 @font-face {
   font-family: 'pixel-script-other';
@@ -149,10 +143,6 @@ img
 
 .script{
   font-family: 'Pixel-Script';
-}
-
-.script2{
-  font-family:'FFScreenstarStdScriptRegular';
 }
 
 .script3{
